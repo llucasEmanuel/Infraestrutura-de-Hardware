@@ -1,19 +1,7 @@
-
-loop1:
-	add x30, x0, x0
-	# le do teclado
-	lb x30, 1025(x0) 
-	# hifen
-	addi x28, x0, 45
-	beq x30, x28, loop2
-	add x31, x0, x30 
-	slli x31, x31, 1 
-	beq x0, x0, loop1
-loop2:
-	
-loop3:
-	
-
+# carrega as variaveis da memoria para os registradores
+lw x18, a
+lw x19, b
+lw x20, c
 lw x11, x
 
 # x = 0 
@@ -40,17 +28,13 @@ if2:
 if3:
 	addi x11, x0, 1
 
+# atualiza o valor de x na memória e halt
 else:
+	sw x11, x
+	halt
 
-sw x11, x
-#convertendo para o ASCII
-addi x11, x11, 48
-#printando a variavel x no monitor
-sb x11, 1024(x0)
-halt
-
-a: .word 0x0
-b: .word 0x0
-c: .word 0x0
-x: .word 0x0
+a: .word 5
+b: .word 65
+c: .word 16
+x: .word 0xf
 
