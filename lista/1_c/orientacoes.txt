@@ -1,6 +1,6 @@
 A entrada deve ter o seguinte formato:
 (sinal_a)a (sinal_b)b (sinal_c)c
 
-OBS1: Esse formato é para as 'a', 'b' e 'c' com 2 dígitos. Ou seja, se 'a' for 5 por exemplo, então é preciso digitar 05
+OBS1: Esse formato é para as variáveis 'a', 'b' e 'c' com 2 dígitos. Ou seja, se 'a' for 5 por exemplo, então é preciso digitar 05
 
 OBS2: Quando for rodar a simulação, mudar o Time de 1s para 2s
