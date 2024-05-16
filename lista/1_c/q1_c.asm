@@ -1,21 +1,29 @@
-#inicializando
+# inicializando as variaveis da memória
 lw x18, a
 lw x19, b
 lw x20, c
 
-# criando auxiliares
+#==========================================================================================================
+# criando auxiliares que serão utilizados no decorrer do código
 addi x28, x0, 0 #contador
 addi x29, x0, 43 #'+'
 addi x30, x0, 45 #'-'
+addi x31, x0, 0x30 #0 em Hex na ASCII
 # x18 -> a, x19-> b e x20 ->c
 
-#======================================================================
+#==========================================================================================================
 # carregando o valores
 loop:
 	lb x5, 1025(x0)
+	beq x5, x29, continue
+	beq x5, x30, continue
+	beq x0, x0, loop
+	
+continue:
 	lb x6, 1025(x0)
 	lb x7, 1025(x0)
-
+	sub x6, x6, x31  
+	sub x7, x7, x31
 	beq x5, x29, mais
 	beq x5, x30, menos
 	
@@ -59,7 +67,7 @@ menos:
 	addi x5, x0, 3
 	beq x5, x28, C
 
-#================================================
+#==========================================================================================================
 #salva a
 A:
 	add x18, x0, x6
@@ -77,7 +85,7 @@ C:
 	add x20, x0, x6
 	sw x20, c
 
-#============================================
+#==========================================================================================================
 #colocando o valor de x em um registrador
 lw x11, x
 
@@ -108,7 +116,8 @@ if3:
 # atualiza o valor de x na memória e halt
 else:
 	sw x11, x
-	lb x11, 1024(x0)
+	addi x11, x11, 0x30
+	sb x11, 1024(x0)
 	halt
 
 a: .word 0x0
