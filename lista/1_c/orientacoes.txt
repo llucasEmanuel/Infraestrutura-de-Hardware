@@ -1,0 +1,4 @@
+A entrada deve ter o seguinte formato:
+(sinal_a)a (sinal_b)b (sinal_c)c
+
+OBS: Quando for rodar a simulação, mudar o Time de 1s para 2s
