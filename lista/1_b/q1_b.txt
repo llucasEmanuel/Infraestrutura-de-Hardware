@@ -1,0 +1,14 @@
+i.(Dual-Cycle)
+- Tempo de Simulação: 4.000 s (f = 100Hz durante 1s)
+- IC = 16
+- 28 pulsos de clock durante a execução
+- CPI = 28/16 = 7/4 = 1.75
+- CPU Time = IC x CPI x Tc = (IC x CPI) / f = (16 x 1.75) / 100 = 0.28s
+
+ii. (Cycle-Accurate)
+- Tempo de Simulação: 3.969 s (f = 100Hz durante 1s)
+- IC = 16
+- 56 pulsos de clock durante a execução
+- CPI = 56/16 = 7/2 = 3.5
+- CPU Time = IC x CPI x Tc = (IC x CPI) / f = (16 x 3.5) / 100 = 0.56s
+
