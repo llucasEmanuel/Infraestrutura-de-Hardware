@@ -1,14 +1,15 @@
-i.(Dual-Cycle)
-- Tempo de Simulação: 4.000 s (f = 100Hz durante 1s)
-- IC = 16
-- 28 pulsos de clock durante a execução
-- CPI = 28/16 = 7/4 = 1.75
-- CPU Time = IC x CPI x Tc = (IC x CPI) / f = (16 x 1.75) / 100 = 0.28s
+Questão 1 - Letra b.
 
-ii. (Cycle-Accurate)
-- Tempo de Simulação: 3.969 s (f = 100Hz durante 1s)
-- IC = 16
-- 56 pulsos de clock durante a execução
-- CPI = 56/16 = 7/2 = 3.5
-- CPU Time = IC x CPI x Tc = (IC x CPI) / f = (16 x 3.5) / 100 = 0.56s
+  i.(RISC-V Dual-Cycle)
+    - Tempo de simulação: 3.657s (f = 100Hz durante 1s)
+    - IC (Número de instruções) = 14
+    - 28 pulsos de clock durante a execução das instruções
+    - CPI = 28/14 = 2
+    - CPU Time = IC x CPI x Tc = (IC x CPI)/f = (14 x 2)/100 = 0.28s
 
+  ii.(RISC-V Cycle-Accurate)
+    - Tempo de simulação: 3.688s (f = 100Hz durante 1s)
+    - IC (Número de instruções) = 14
+    - 56 pulsos de clock durante a execução das instruções
+    - CPI = 56/14 = 4
+    - CPU Time = IC x CPI x Tc = (IC x CPI)/f = (14 x 4)/100 = 0.56s
