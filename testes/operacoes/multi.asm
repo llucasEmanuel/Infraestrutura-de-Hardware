@@ -13,9 +13,12 @@ multiplica_loop:
 
 pula_adicao:
     slli x18, x18, 1 #x18 = x18 << 1
-    srli x19, x19, 1 #x19 = x19 >> 1
+    srli x19, x19, 1 #x19 = x19 >> 1 
     addi x6, x6, -1
     bne x6, x0, multiplica_loop
+
+#registrando o resultado na memória
+sw x11, prod
 
 halt
 
